@@ -12,7 +12,6 @@ public class Mano {
 	 */
 	private final Forma forma;
 	
-
 	public Mano(final Forma forma) {
 
 		this.forma = forma;
@@ -30,7 +29,7 @@ public class Mano {
 	 * @return un Resultado, de acuerdo al estado del juego.
 	 */
 	public Resultado jugarCon(final Mano otra) {
-		
+
 		final Integer cuatro = 4;
 		final Integer tres = 3;
 
