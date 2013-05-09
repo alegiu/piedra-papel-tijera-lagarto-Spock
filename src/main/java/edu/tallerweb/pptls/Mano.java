@@ -17,7 +17,7 @@ public class Mano {
 		this.forma = forma;
 
 		if (forma == null) {
-		
+
 			throw new RuntimeException("No implementado aún");
 		}
 	}
