@@ -11,6 +11,7 @@ public class Mano {
 	 * @param forma, la Forma que adopta la Mano.
 	 */
 	private final Forma forma;
+	
 
 	public Mano(final Forma forma) {
 
@@ -29,6 +30,9 @@ public class Mano {
 	 * @return un Resultado, de acuerdo al estado del juego.
 	 */
 	public Resultado jugarCon(final Mano otra) {
+		
+		final Integer cuatro = 4;
+		final Integer tres = 3;
 
 		Integer manoUno = this.forma.getValor();
 		Integer manoDos = otra.forma.getValor();
@@ -45,7 +49,7 @@ public class Mano {
 		/**
 		 * Spock le gana a piedra y a tijera
 		 */
-		if ((manoUno == 1) && (manoDos == 0 || manoDos == 4)) {
+		if ((manoUno == 1) && (manoDos == 0 || manoDos == cuatro)) {
 
 			return Resultado.GANA;
 
@@ -63,7 +67,7 @@ public class Mano {
 		/**
 		 * Lagarto gana a Spock y a papel
 		 */
-		if ((manoUno == 3) && (manoDos == 1 || manoDos == 2)) {
+		if ((manoUno == tres) && (manoDos == 1 || manoDos == 2)) {
 
 			return Resultado.GANA;
 
@@ -72,7 +76,7 @@ public class Mano {
 		/**
 		 * Tijera le gana a papel y a lagarto
 		 */
-		if ((manoUno == 4) && (manoDos == 2 || manoDos == 3)) {
+		if ((manoUno == cuatro) && (manoDos == 2 || manoDos == tres)) {
 
 			return Resultado.GANA;
 
